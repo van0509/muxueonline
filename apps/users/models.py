@@ -10,7 +10,7 @@ from datetime import datetime
 class UserProfile(AbstractUser):
     nick_name=models.CharField(max_length=50,verbose_name=u'昵称',default=u'')
     birthday=models.DateField(verbose_name=u'生日',null=True,blank=True)
-    gender=models.CharField(choices=(('male',u'男'),('demale',u'女')),default=u'female',max_length=5)
+    gender=models.CharField(choices=(('male',u'男'),('demale',u'女')),default=u'female',max_length=7)
     address=models.CharField(max_length=100,default=u'')
     mobile=models.CharField(max_length=11,null=True,blank=True)
     image=models.ImageField(upload_to='image/%Y/%m',default=u'image/default.png',max_length=100)
